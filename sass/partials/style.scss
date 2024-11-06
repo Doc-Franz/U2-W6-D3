@@ -1,0 +1,91 @@
+@import "./animations";
+@import "./fonts";
+@import "./spaces";
+@import "./mixin";
+@import "./colors";
+
+body {
+  margin: $margin-zero;
+  header {
+    background-color: black;
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-inline: $padding-inline-first;
+      padding-block: $padding-block;
+      img {
+        width: 10%;
+        margin-right: $space-between-first;
+      }
+
+      & a {
+        text-decoration: none;
+        color: white;
+        font-size: $font-size-heading;
+        margin-right: 2rem;
+      }
+    }
+  }
+}
+
+main {
+  margin-top: 2rem;
+  padding-inline: $padding-inline-first;
+
+  @media screen and (min-width: 992px) {
+    padding-inline: $padding-inline-second;
+  }
+
+  .hero {
+    background-color: $background-hero;
+    border-radius: 20px;
+
+    section {
+      display: flex;
+      justify-content: space-around;
+
+      .go-to {
+        all: unset;
+
+        border: 1px solid black;
+        border-radius: 10px;
+        padding-inline: $padding-block;
+        margin-block: $padding-block;
+
+        p {
+          font-size: $font-size-heading;
+          margin: 0.2rem;
+        }
+
+        &:hover {
+          background-color: rgb(218, 215, 215);
+        }
+      }
+    }
+    & .content {
+      display: flex;
+      .description {
+        padding-left: $padding-inline-first;
+        h1 {
+          margin-top: $margin-zero;
+        }
+        & p {
+          font-size: $font-size-heading;
+        }
+      }
+    }
+  }
+}
+
+.img-section {
+  margin-top: $padding-inline-first;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  figure {
+    img {
+      width: 200px;
+    }
+  }
+}

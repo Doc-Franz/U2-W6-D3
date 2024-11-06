@@ -1,0 +1,21 @@
+@mixin myImg($img-shadow) {
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: $img-shadow;
+}
+
+#img-1 {
+  @include myImg(10px 5px 5px rgb(185, 108, 108));
+}
+
+#img-2 {
+  @include myImg(5px 10px 5px rgb(51, 121, 11));
+}
+
+#img-3 {
+  @include myImg(15px 10px 5px rgb(47, 0, 255));
+}
+
+#img-4 {
+  @include myImg(0px 15px 5px rgb(201, 89, 154));
+}

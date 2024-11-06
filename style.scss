@@ -3,9 +3,10 @@
 @import "./sass/partials/spaces";
 @import "./sass/partials/mixin";
 @import "./sass/partials/colors";
+@import "./sass/partials/reset";
 
 body {
-  margin: $margin-zero;
+  @extend %reset-body;
   header {
     background-color: black;
     nav {
@@ -76,7 +77,7 @@ main {
       .description {
         padding-left: $padding-inline-first;
         h1 {
-          margin-top: $margin-zero;
+          margin-top: 0;
         }
         & p {
           font-size: $font-size-heading;
@@ -96,7 +97,7 @@ main {
   }
 
   figure {
-    margin: $margin-zero;
+    margin: 0;
     margin-bottom: 2rem;
     width: 55%;
 

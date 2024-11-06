@@ -42,8 +42,10 @@
 }
 
 body {
-  margin: 0rem;
+  margin: 0;
+  box-sizing: border-box;
 }
+
 body header {
   background-color: black;
 }
@@ -111,7 +113,7 @@ main .hero .content .description {
   padding-left: 2rem;
 }
 main .hero .content .description h1 {
-  margin-top: 0rem;
+  margin-top: 0;
 }
 main .hero .content .description p {
   font-size: 1.2rem;
@@ -129,7 +131,7 @@ main .hero .content .description p {
   }
 }
 .img-section figure {
-  margin: 0rem;
+  margin: 0;
   margin-bottom: 2rem;
   width: 55%;
 }

@@ -1,8 +1,8 @@
-@import "./animations";
-@import "./fonts";
-@import "./spaces";
-@import "./mixin";
-@import "./colors";
+@import "./sass/partials/animations";
+@import "./sass/partials/fonts";
+@import "./sass/partials/spaces";
+@import "./sass/partials/mixin";
+@import "./sass/partials/colors";
 
 body {
   margin: $margin-zero;
@@ -19,11 +19,19 @@ body {
         margin-right: $space-between-first;
       }
 
-      & a {
-        text-decoration: none;
-        color: white;
-        font-size: $font-size-heading;
-        margin-right: 2rem;
+      & .link {
+        display: flex;
+
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: $font-size-heading;
+          margin-right: 2rem;
+
+          @media screen and (min-width: 992px) {
+            margin-right: 4rem;
+          }
+        }
       }
     }
   }
@@ -82,10 +90,22 @@ main {
   margin-top: $padding-inline-first;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+  }
+
   figure {
+    margin: $margin-zero;
+    margin-bottom: 2rem;
+    width: 55%;
+
+    @media screen and (min-width: 768px) {
+      width: 45%;
+    }
+
     img {
-      width: 200px;
+      width: 100%;
     }
   }
 }

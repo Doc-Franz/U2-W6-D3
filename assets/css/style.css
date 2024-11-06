@@ -58,11 +58,19 @@ body header nav img {
   width: 10%;
   margin-right: 8rem;
 }
-body header nav a {
+body header nav .link {
+  display: flex;
+}
+body header nav .link a {
   text-decoration: none;
   color: white;
   font-size: 1.2rem;
   margin-right: 2rem;
+}
+@media screen and (min-width: 992px) {
+  body header nav .link a {
+    margin-right: 4rem;
+  }
 }
 
 main {
@@ -113,8 +121,23 @@ main .hero .content .description p {
   margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .img-section {
+    justify-content: space-between;
+  }
+}
+.img-section figure {
+  margin: 0rem;
+  margin-bottom: 2rem;
+  width: 55%;
+}
+@media screen and (min-width: 768px) {
+  .img-section figure {
+    width: 45%;
+  }
 }
 .img-section figure img {
-  width: 200px;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
